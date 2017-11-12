@@ -25,6 +25,8 @@ libstorj code updates to support use with XCode 9+ and Swift 4+ derived from Swi
  * @param[in] mnemonic - The file encryption mnemonic
  * @return A non-zero value on error, zero on success.
  */
+
+
 int storj_encrypt_write_auth(const char *filepath,
                              const char *passhrase, <-------
                              const char *bridge_user,
