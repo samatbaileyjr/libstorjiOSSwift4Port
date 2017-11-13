@@ -47,7 +47,7 @@ and "data type conversion/precision", "uninitialize use of variables", "uninitia
 
 src/rs.c:777:65: Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'int'
 
-/Users/nobodi/Documents/BLOCKCHAIN/SwiftyStorj-master/SwiftyStorj/SwiftyStorj/src/uploader.c:1044:13: Variable 'response' is used uninitialized whenever 'if' condition is true
+src/uploader.c:1044:13: Variable 'response' is used uninitialized whenever 'if' condition is true
 
 Pre-requisite, convert libstorj test cases before implementing "Concern" and "Todo" as QC precaution, especially for bitwise operators. Converting test cases will also deliver full functionality in Swift 4.
 
