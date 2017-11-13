@@ -40,3 +40,46 @@ int storj_encrypt_write_auth(const char *filepath,
 
 Concern:
 4) 145 goto in 9 files, some of the goto's make it harder to setup unit level testing, etc. Evaluating removal of goto for use by Swift 4 as pod.
+
+TODO:
+5) 45 warnings/issues remain, primary root cause, conversion from gcc to llvm
+and "data type conversion/precision", "uninitialize use of variables", "uninitialize use of variables, which is discouraged in Swift" Examples:
+
+src/rs.c:777:65: Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'int'
+
+/Users/nobodi/Documents/BLOCKCHAIN/SwiftyStorj-master/SwiftyStorj/SwiftyStorj/src/uploader.c:1044:13: Variable 'response' is used uninitialized whenever 'if' condition is true
+
+Pre-requisite, convert libstorj test cases before implementing "Concern" and "Todo" as QC precaution, especially for bitwise operators. Converting test cases will also deliver full functionality in Swift 4.
+
+test_api();
+test_api_badauth();
+test_upload();
+test_upload_cancel();
+test_download();
+test_download_cancel();
+test_mnemonic_check();
+test_mnemonic_generate();
+test_storj_mnemonic_generate();
+test_storj_mnemonic_generate_256();
+test_generate_seed();
+test_generate_seed_256();
+test_generate_seed_256_trezor();
+test_generate_bucket_key();
+test_generate_file_key();
+test_increment_ctr_aes_iv();
+test_read_write_encrypted_file();
+test_meta_encryption();
+test_str2hex();
+test_hex2str();
+test_get_time_milliseconds();
+test_determine_shard_size();
+test_memory_mapping();
+
+test_galois();
+test_sub_matrix();
+test_multiply();
+test_inverse();
+test_one_encoding();
+test_one_decoding();
+test_encoding();
+test_reconstruct();
