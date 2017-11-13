@@ -43,7 +43,7 @@ Concern:
 
 TODO:
 5) 45 warnings/issues remain, primary root cause, conversion from gcc to llvm
-and "data type conversion/precision", "uninitialize use of variables", "uninitialize use of variables, which is discouraged in Swift" Examples:
+and "data type conversion/precision", "uninitialize use of variables, which is discouraged in Swift" Examples:
 
 src/rs.c:777:65: Implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'int'
 
