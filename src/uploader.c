@@ -1039,6 +1039,9 @@ static void push_frame(uv_work_t *work)
 
     // Add exclude (Don't try to upload to farmers that have failed before)
     json_object *exclude = json_object_new_array();
+    // moved - close llvm warning - use before init
+    struct json_object *response = NULL;
+    
     if (state->exclude) {
         char *exclude_list = calloc(strlen(state->exclude) + 1, sizeof(char));
         if (!exclude_list) {
@@ -1061,7 +1064,7 @@ static void push_frame(uv_work_t *work)
                     "fn[push_frame] - JSON body: %s", json_object_to_json_string(body));
 
     int status_code;
-    struct json_object *response = NULL;
+    //struct json_object *response = NULL;
     int request_status = fetch_json(req->http_options,
                                     req->options,
                                     "PUT",
